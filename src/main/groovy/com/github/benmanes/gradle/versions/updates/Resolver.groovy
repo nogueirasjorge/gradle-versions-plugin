@@ -202,7 +202,7 @@ class Resolver {
     String version = dependency.version == null ? 'none' : '+'
 
     return project.dependencies.create("${dependency.group}:${dependency.name}:${version}") {
-      transitive = false
+      transitive = true
     }
   }
 
